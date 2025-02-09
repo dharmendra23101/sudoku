@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #1e073f;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background: #1e073f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0  50px #6425bc;
+    text-align: center;
+    position: relative;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(9, 30px);
+    grid-template-rows: repeat(9, 30px);
+    gap: 1px;
+    margin: 30px auto;
+    border: 3px solid black;
+    left: 0;
+    text-align: center;
+    align-items: center;
+}
+input {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #000;
+    outline: none;
+}
+.buttons {
+    margin-top: 10px;
+}
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+}
+button:hover {
+    background-color: #0056b3;
+}
+.invalid {
+    background-color: #ffcccc;
+}
+
+
+.grid input {
+    border: 1px solid #000;
+}
+.grid input:nth-child(9n+4),
+.grid input:nth-child(9n+7) {
+    border-left: 2px solid black;
+}
+.grid input:nth-child(n+28):nth-child(-n+36),
+.grid input:nth-child(n+55):nth-child(-n+63) {
+    border-top: 2px solid black;
+}
+.grid input:nth-child(3n+1),
+.grid input:nth-child(3n+2),
+.grid input:nth-child(3n+3) {
+    background-color: #e0e0e0;
+}
+.grid input:nth-child(n+10):nth-child(-n+18),
+.grid input:nth-child(n+37):nth-child(-n+45),
+.grid input:nth-child(n+64):nth-child(-n+72) {
+    background-color: #d3d3d3;
+}
